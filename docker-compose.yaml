@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  game-bot:
+    image: twobrowin/game-bot:1.0.2
+    build:
+     context: .
+    ports:
+      - 5432:5432
+      - 9000:9000
+      - 9001:9001
+    env_file:
+      - .env

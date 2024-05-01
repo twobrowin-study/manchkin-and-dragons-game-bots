@@ -1,0 +1,11 @@
+#!/bin/bash
+
+app=$1
+pre_timout=$2
+
+sleep $pre_timout
+
+while :; do
+    ${VIRTUAL_ENV}/bin/python3 -u ${GAME_HOME}/src/$1/main.py
+    sleep 3
+done

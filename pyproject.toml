@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "game-bots"
+version = "1.0.0"
+description = "Телеграм бот для игры Светлый утренний сон Керола"
+authors = ["Egor Dubrovin <dubrovinen@bmstu.ru>", "Daria Stepanova", "Ilya Reznikov", "Andrey Grishenko", "Sergey Kuznetsov", "Dmitry Radonezky"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "utils", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "3.12.2"
+python-telegram-bot = {version = "^21.0.1", extras = ["job-queue"]}
+python-dotenv = "^1.0.1"
+pydantic = "^2.6.4"
+pydantic-settings = "^2.2.1"
+pyyaml = "^6.0.1"
+loguru = "^0.7.2"
+apscheduler = "^3.10.4"
+jinja2 = "^3.1.3"
+minio = "^7.2.5"
+SQLAlchemy = "^2.0.28"
+asyncpg = "^0.29.0"
+filetype = "^1.2.0"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+python-multipart = "^0.0.9"
+oic = "^1.6.1"
+pillow = "^10.3.0"
+pyzbar = "^0.1.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
